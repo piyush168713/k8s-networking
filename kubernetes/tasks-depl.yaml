@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tasks-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tasks
+  template:
+    metadata:
+      labels:
+        app: tasks
+    spec:
+      containers: 
+        - name: tasks
+          image: piyush168713/docker-k8s:demo-task4
+          env:
+            - name: AUTH_ADDRESS
+              # auth service ip
+              # value: "10.103.177.149"
+              value: "auth-service.default"
+            - name: TASKS_FOLDER
+              value: tasks

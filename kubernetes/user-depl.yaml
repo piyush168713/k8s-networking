@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: users-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: users
+  template:
+    metadata:
+      labels:
+        app: users
+    spec:
+      containers: 
+        - name: users
+          image: piyush168713/docker-k8s:demo-user3
+          env:
+            - name: AUTH_ADDRESS
+              # auth service ip
+              # value: "10.103.177.149"
+              
+              # using dns i.e. creating domain names , "service-name.namespace"
+              value: "auth-service.default"
