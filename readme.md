@@ -29,9 +29,8 @@ then ~ minikube service frontend-service<br>
 and take the ip and paste in browser.<br>
 
 and make sure and the k8s-yaml file are up and running with latest tag
----
-i.e - piyush168713/docker-k8s:demo-auth1
-      piyush168713/docker-k8s:demo-task4
-      piyush168713/docker-k8s:demo-user3
-      piyush168713/docker-k8s:demo-frontend1
----
+
+i.e - piyush168713/docker-k8s:demo-auth1<br>
+      piyush168713/docker-k8s:demo-task4<br>
+      piyush168713/docker-k8s:demo-user3<br>
+      piyush168713/docker-k8s:demo-frontend1<br>
